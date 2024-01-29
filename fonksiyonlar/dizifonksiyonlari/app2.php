@@ -18,7 +18,7 @@
 
     array_merge() : belirtilen dizileri art arda ekleyerek yeni dizi oluşturur. <br>
 
-    array_rand() : diziden belirli sayıda rasthgele bir anahtar döndürür. <br>
+    array_rand() : diziden belirli sayıda rastgele bir anahtar döndürür. <br>
 
     array_reverse() : diziyi tersine sıralayıp döndürür. <br>
 
