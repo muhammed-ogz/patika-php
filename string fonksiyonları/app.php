@@ -77,3 +77,7 @@ $domain = strstr($email,'@');
 
 echo $domain;       //@example.com u dönderir.
 
+$ilkHarfiBuyukYap = ucfirst($text);
+
+print_r($ilkHarfiBuyukYap);
+echo "<br>";
