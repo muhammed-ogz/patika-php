@@ -4,21 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>| GET KULLANIMI | </title>
+    <title>| REQUEST KULLANIMI | </title>
 </head>
 
 <body>
     <pre>
 
-get kullanımı : 
-
-$_GET süper global bir değişkendir .
-    -Süper global değişkenler, her zaman tüm kapsamlarda bulunan yerleşik değişkenlerdir.
-    -PHP $_GET, method = "get" ile bir HTTP GET isteği gönderdikten sonra veri toplamak için kullanılır.
+Request kullanımı : Öntanımlı olarak $_GET , $_POST ve $_COOKIE değişkenlerini içeren ilişkisel dizidir.
+    -Kullanımı GET ve POST kullanımı ile aynıdır.
 
 </pre>
 
-    <form action="get.php" method="get">
+    <form action="request.php?islem=ekle" method="POST">
         <input type="text" name="isim" placeholder="isim giriniz..."><br>
         <input type="text" name="soyisim" placeholder="soyisim giriniz..."><br>
         <button type="submit">Gönderme Butonu</button>
