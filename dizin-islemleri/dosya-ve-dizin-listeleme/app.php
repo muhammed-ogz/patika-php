@@ -64,14 +64,16 @@ function listAll($directory)
 };
 
 listAll($basedir);
-*/
-
-$basedir = require "../../settings.php";
 
 //glob fonksiyonu ile birden çok dosya içerisine filtreleme işlemi nasıl yapılır ? 
 
-$newFilteredDir = glob($basedir . '/*{php,txt}');
-echo "<pre>";
-print_r($newFilteredDir);
+$newFilteredDir = glob($basedir . '/*{php,txt}',GLOB_BRACE);
+
+glob fonksiyonunda böyle birden çok dosyayı bir arada kullanabilmek için uzantıları belirttikten sonra GLOB_BRACE değerini 
+girmemiz gerekmektedir
+*/
+
+
+
 
 
