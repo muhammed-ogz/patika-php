@@ -6,13 +6,14 @@
     <title>Session</title>
 </head>
 <body>
+    <h1>Session İşlemleri</h1>
+
     <pre>
-        session_start komutu ile tarayıcıda bir oturumu açabiliyoruz. tarayıcı kapatılana kadar bizim oturum verilerimiz tarayıcı içerisinde 
-        saklanıyor.
-        session_destroy komutumuz oturum verilerimizi siliyor.
-        header yönlendirmeye yarıyor.
-        bir session'u başlatmadan destroy edemeyiz.
-        $_SESSION süper globalimiz var.
+        session_start() ile oturum başlatılır. Tarayıcı tamamen kapatılana kadar oturum verileri tarayıcıda tutulur.
+        $_SESSION['key'] = 'value'; girdisi ile session değer ataması yapılır.
+        echo $_SESSION['key'] = 'value'; ile session değerine ulaşılır.
+        unset($_SESSION['key'] = 'value'); ile bir anahtara ait session değeri silinir.
+        session_destroy(); ile session oturumu kapatılır.
     </pre>
 </body>
 </html>
@@ -20,3 +21,6 @@
 <?php
 session_start();
 $_SESSION['isim'] = 'Muhammed';
+$_SESSION['soyisim'] = 'Oğuz';
+$_SESSION['Sehir'] = 'Kayseri';
+$_SESSION['yas'] = 29;
