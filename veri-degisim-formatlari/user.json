@@ -1,0 +1,26 @@
+[
+    {
+        "isim": "Muhammed",
+        "soyisim": "Oğuz",
+        "yas": 20,
+        "email": "muhammedoguz@gmail.com"
+    },
+    {
+        "isim": "Kemal",
+        "soyisim": "TangaSever",
+        "yas": 33,
+        "email": "sane@gmail.com"
+    },
+    {
+        "isim": "Cabbar",
+        "soyisim": "K*rdVuran",
+        "yas": 65,
+        "email": "krdvuran@gmail.com"
+    },
+    {
+        "isim": "Napcan",
+        "soyisim": "Oğuz",
+        "yas": 19,
+        "email": "napcan31@gmail.com"
+    }
+]
