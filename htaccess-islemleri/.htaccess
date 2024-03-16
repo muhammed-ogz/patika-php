@@ -1,0 +1,35 @@
+#DirectoryIndex /merhaba.php
+
+#aşağıdaki işlem sadece iletisim.php dosyasına yapılan ayarları kapsar.
+#<files 'iletisim.php'>
+#    deny from all
+#</files>
+
+#Authentication işlemi yaptırmak için
+
+# AuthType Basic 
+# AuthName "Restricted Content"
+# AuthUserFile htaccess-islemleri\.htpasswd
+# require valid-user
+
+# ErrorDocument 500 /500.html
+
+
+#ReWrite işlemleri (Safe Link için gerekli)
+
+RewriteEngine on
+# index.php dosyasına gittiği zaman linkte muhammed yazması olayını aşağıdaki kod bloğu ile yapabiliriz
+# RewriteRule ^muhammed$ index.php    
+
+# hangi parametre gelirse gelsin index.php dosyasına atmasını isteme olayını aşağıdaki kod bloğu ile yapabiliriz.
+# RewriteRule ^(.*)$ index.php    
+
+# girilen değeri get parametresi ile alıp index.php dosyasına aktarma işlemini yapmak için
+
+RewriteCond %{HTTP_HOST ^www.muhammedoguz.epizy.com$}
+RewriteRule ^(.*)$ http://muhammedoguz.epizy.com$1 [R=301]
+RewriteRule ^(tr|en)?/?([a-z0-9/-]+)$ index.php?dil=$1&route=$2 [QSA]   
+# [QSA] açılımı : query string append anlamına gelir. manuel get parametrelerini kullanabilir
+
+RewriteCond %{SERVER_PORT} !=443 
+RewriteRule ^ https://muhammedoguz.epizy.com%{REQUEST_URI} [R,NS,L]
